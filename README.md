@@ -30,8 +30,8 @@ Hi there! I'm Duncan, and this is my portfolio website code built with HTML, CSS
 
 ## **Want to see it live? 👀**
 
-* Visit: [https://www.linkedin.com/in/duncan-zevai-04a31720b/](https://www.linkedin.com/in/duncan-zevai-04a31720b/)
-* Or, explore the code on GitHub: [https://github.com/Duncan005](https://github.com/Duncan005)
+* Visit: [https://github.com/Duncan005](https://www.linkedin.com/in/duncan-zevai-04a31720b/)
+* Or, explore the code on GitHub: [https://www.linkedin.com/in/duncan-zevai-04a31720b/](https://github.com/Duncan005)
 
 ## **Why This Web Developer Portfolio Stands Out**
 
