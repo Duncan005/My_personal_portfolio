@@ -1,2 +1,0 @@
-# My_personal_portfolio
-My_personal_portfolio
