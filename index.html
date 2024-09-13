@@ -556,7 +556,8 @@
             <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="500">
                 <div class="col-lg-8">
                     <div class="contact-form">
-                        <form action="#" method="POST">
+                        <!-- Modify the form to use mailto -->
+                        <form id="contactForm">
                             <div class="row g-2">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -570,7 +571,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="subject" name="subject"  placeholder="Subject *" required>
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject *" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -605,11 +606,34 @@
     </button>
 
     <!-- JavaScript -->
+
     <script src="assets/js/aos.js" defer></script>
     <script src="assets/js/jquery-3.7.1.min.js" defer></script>
     <script src="assets/js/owl.carousel.min.js" defer></script>
     <script src="assets/js/bootstrap.min.js" defer></script>
     <script src="assets/js/script.js" defer></script>
+    <script>
+        // Handle form submission via mailto
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            // Get form field values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+        
+            // Construct the mailto link
+            var mailtoLink = 'mailto:zevaiduncan2@gmail.com'
+                           + '?subject=' + encodeURIComponent(subject)
+                           + '&body=' + encodeURIComponent('Name: ' + name + '\n'
+                           + 'Email: ' + email + '\n\n' + message);
+        
+            // Open the mailto link in a new tab/window
+            window.location.href = mailtoLink;
+        });
+        </script>
+
 
 </body>
 </html>
