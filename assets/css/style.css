@@ -425,13 +425,30 @@ a:hover{
 }
 
 .square-img {
-    width: 70%;
-    height: auto;
-    border-radius: 0.5rem;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 12px 8px 0px 0px;
-    -webkit-box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 12px 8px 0px 0px;
-}
+    border: 5px solid #fff;
+    box-shadow: 0px -10px 30px rgba(255, 255, 255, 0.6), /* LED light effect */
+              0px 0px 10px rgba(255, 255, 255, 0.4);
+    position: relative;
+  }
+  
+  .square-img::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255,255,255,0.6), rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    filter: blur(8px);
+    z-index: 1;
+  }
+    
 
 /*--------------------------------------------------------------
 # Things I Love Section
@@ -543,14 +560,17 @@ a:hover{
     -webkit-transition-duration: .5s;
 }
 
-.about-portrait .pic{
-    width: 70%;
-    height: auto;
-    border-radius: 0.5rem;
+.about-portrait .pic {
+    width: 55%;
+    height: 100%;
+    border-radius: 50%; /* Makes the image circular */
     object-fit: cover;
-    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 12px 8px 0px 0px #850dd5;
-    -webkit-box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 12px 8px 0px 0px #850dd5;
+    box-shadow: 
+        0 0 30px 10px rgba(255, 0, 0, 0.6),  /* Red LED glow */
+        0 0 50px 20px rgba(255, 255, 0, 0.5), /* Yellow LED glow */
+        12px 8px 0px 0px #850dd5; /* Original shadow */
 }
+
 
 #about .bio{
     padding: 30px 0 30px 0;
