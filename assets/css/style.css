@@ -937,7 +937,7 @@ a:hover{
 }
 
 a {
-    color: var(--btn-color);
+    color: maroon;
     text-decoration: none;
     font-weight: 600;
 }
@@ -989,29 +989,48 @@ a:hover {
 /*--------------------------------------------------------------
 # Footer Section
 --------------------------------------------------------------*/
-
-#footer > .container{
-    padding: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+* {
+   margin: 0;
+   padding: 0;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   box-sizing: border-box;
 }
 
-#footer .copyright-text{
-    margin: 0;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    color: var(--muted-text);
+body{
+    background: #eef8ff;
+}
+ footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
 }
 
-.copyright-text span{
-    color: blue;
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-.copyright-text .heart-icon {
-    background: var(--primary-gradient-color);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.col{
+    flex-basis: 25%;
+    padding: 10px;
 }
+
+.logo{
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+
 
 /*--------- Back To Top ------------*/
 
