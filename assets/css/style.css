@@ -937,9 +937,11 @@ a:hover{
 }
 
 a {
-    color: maroon;
-    text-decoration: none;
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: yellow; /* Custom underline color */
     font-weight: 600;
+    
 }
 
 a:hover {
@@ -989,47 +991,96 @@ a:hover {
 /*--------------------------------------------------------------
 # Footer Section
 --------------------------------------------------------------*/
-* {
-   margin: 0;
-   padding: 0;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   box-sizing: border-box;
-}
 
-body{
-    background: #eef8ff;
-}
- footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background: linear-gradient(to right, #00093c, #2d0b00);
+/* Basic Footer Styling */
+#footer {
+    background-color: #00093c;
     color: #fff;
-    padding: 100px 0 30px;
-    border-top-left-radius: 125px;
-    font-size: 13px;
-    line-height: 20px;
+    padding: 40px 0;
 }
 
-.row{
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 85%;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
 }
 
-.col{
-    flex-basis: 25%;
-    padding: 10px;
+.social-icons a:hover{
+    color:#00aced;
 }
 
-.logo{
-    width: 80px;
-    margin-bottom: 30px;
+/*Button style for newsletter*/
+.footer-col form button{
+    background-color: #ff7f50;
+    border: none;
+    padding: 8px 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+.footer-col form button:hover{
+    background-color: #e67339;
+}
+
+.footer-col h3 {
+    position: relative;
+}
+
+.footer-col h3:hover::after{
+    width: 100%;
+}
+
+.footer-col p, .footer-col ul, .footer-col form {
+    margin-bottom: 10px;
+}
+
+/* Animation for underline moving effect */
+.underline {
+    width: 70%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.underline span {
+    display: block;
+    width: 15px;
+    height: 100%;
+    background: #ff7f50; /* Custom color for the animation */
+    position: absolute;
+    left: -20px;
+    top: 0;
+    border-radius: 3px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+/* Responsive for small screens */
+@media (max-width: 500px) {
+    .footer-container {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+        align-items: center;
+    }
+
+    .footer-col{
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
 
 
 /*--------- Back To Top ------------*/
