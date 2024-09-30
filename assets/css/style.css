@@ -238,6 +238,8 @@ a:hover{
 #header{
     background: transparent;
     transition: top 0.5s ease;
+    background-color: #00093c;
+    padding: 10px;
     -webkit-transition: top 0.5s ease;
 }
 
@@ -334,6 +336,7 @@ a:hover{
     position: relative;
     padding: 50px 0px 50px 0px;
     min-height: 85vh;
+    background-color: #008080;
 }
 
 #hero .name {
@@ -469,6 +472,7 @@ a:hover{
     background-image: url(/assets/images/grid.png);
     background-size: contain;
     min-height: 60vh;
+    background-color: #00093c;
 }
 
 #things-i-love .card {
@@ -523,6 +527,24 @@ a:hover{
     background-image: url(/assets/images/grid.png);
     background-size: contain;
     min-height: 80vh;
+    background-color: #008080;
+}
+
+.bio {
+    margin: 0.5rem 0; /* Adjusted margin for less space */
+    line-height: 1.4; /* Reduced line height for tighter text */
+}
+
+/* Adjust container padding if necessary */
+#about .container {
+    padding-top: 2rem; /* Adjust padding as needed */
+    padding-bottom: 2rem; /* Adjust padding as needed */
+}
+
+/* Optional: Adjust image and column spacing */
+.about-portrait img {
+    max-height: 500px; /* Limit image height */
+    object-fit: cover; /* Ensure proper aspect ratio */
 }
 
 .about-portrait{
@@ -608,70 +630,104 @@ a:hover{
 --------------------------------------------------------------*/
 
 #skills{
+    display: flex;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.2rem;
     padding: 50px 50px;
     min-height: 80vh;
+    background-color: #00093c;
 }
 
-.skill{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: transparent;
-    padding: 18px 0px;
-    border-radius: 25px;
-    backdrop-filter: blur(300px);
-    -webkit-backdrop-filter: blur(300px);
-    box-shadow: 0 0 1px 0 rgba(144,81,227,.5), 0 0 0.5px 0.5px rgba(141,53,229,.336);
-    -webkit-box-shadow: 0 0 1px 0 rgba(144,81,227,.5), 0 0 0.5px 0.5px rgba(141,53,229,.336);
+/* Skills Section with Custom Border and Backdrop */
+.skill {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border: 1px solid rgba(144, 81, 227, .5);
+    border-left: 3px solid rgba(144, 81, 227, .8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
 }
 
-.skill-image{
-    width: 71px;
-    padding: 8px;
+.skill:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.skill-name{
-    letter-spacing: 2px;
-    font-size: 17px;
-    padding-top: 5px;
-    margin: 0;
+.skill-image {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
 }
+
+.skill-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
 
 /*--------------------------------------------------------------
 # Tools Section
 --------------------------------------------------------------*/
 
+/* Tools Section */
 #tools{
-    padding: 50px 0px 20px 0px;
-    background-image: url(/assets/images/grid.png);
-    background-size: contain;
-    min-height: 60vh;
+    background-color: #008080;
 }
-
-.tool{
+.tools-container {
     display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: transparent;
-    padding: 18px 0px;
-    border-radius: 25px;
-    backdrop-filter: blur(300px);
-    -webkit-backdrop-filter: blur(300px);
-    box-shadow: 0 0 1px 0 rgba(144,81,227,.5), 0 0 0.5px 0.5px rgba(141,53,229,.336);
-    -webkit-box-shadow: 0 0 1px 0 rgba(144,81,227,.5), 0 0 0.5px 0.5px rgba(141,53,229,.336);
+    gap: 1rem;
+    flex-wrap: wrap;
+    background-color: #008080;
 }
 
-.tool-image{
-    width: 71px;
-    padding: 8px;
+/* Tools Section with Custom Border and Backdrop */
+.tool {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border: 1px solid rgba(144, 81, 227, .5);
+    border-left: 3px solid rgba(144, 81, 227, .8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
 }
 
-.tool-name{
-    letter-spacing: 2px;
-    font-size: 17px;
-    padding-top: 5px;
-    margin: 0;
+.tool:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
+
+.tool-image {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.tool-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+
+@media (max-width: 768px) {
+    .tools-container {
+        flex-direction: column;
+    }
+}
+
 
 /*--------------------------------------------------------------
 # Timeline Section
@@ -690,6 +746,7 @@ a:hover{
     min-height: 90vh;
     background-image: url(/assets/images/grid.png);
     background-size: contain;
+    background-color: #00093c;
 }
 
 .project-card{
@@ -803,19 +860,22 @@ a:hover{
 --------------------------------------------------------------*/
 
 #testimonials {
-    padding: 50px 0px;
-    min-height: 90vh;
-    background-image: url(/assets/images/grid.png);
-    background-size: contain;
+    background-color: #008080;
+    padding: 60px 0;
 }
 
 .testimonial{
     margin: 0 15px;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial .description{
     position: relative;
-    font-size: 13px;
+    font-size: 18px;
     line-height: 26px;
     padding: 30px 20px;
     border: 1px solid rgba(144, 81, 227, .5);
@@ -847,14 +907,18 @@ a:hover{
     margin: 20px 30px 10px;
     border: solid 3px transparent;
     border-radius: 50%;
+    object-fit: cover;
     background-image: var(--primary-gradient-color), radial-gradient(circle at top left, var(--primary-color),var(--secondary-color));;
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
 
 .testimonial .pic img{
-    width: 100%;
-    height: auto;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+
 }
 
 .testimonial .detail{
@@ -897,6 +961,7 @@ a:hover{
     background-image: url(/assets/images/grid.png);
     background-size: contain;
     background-position: center;
+    background-color: #00093c;
 }
 
 .certifications-grid {
@@ -1012,6 +1077,7 @@ a:hover {
 #contact{
     padding: 100px 0;
     min-height: 90vh;
+    background-color: #008080;
     background-image: url(/assets/images/grid.png);
     background-size: contain;
 }
