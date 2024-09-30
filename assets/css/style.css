@@ -901,23 +901,78 @@ a:hover{
 
 .certifications-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    justify-items: center;
+    margin-top: 40px;
 }
 
 .education-card {
-    background-color: #415de6;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+
+/*Keyframes for the fade-in-up animation*/
+@keyframes fadeInUp{
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .education-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*Card Title*/
+.education-card .card-title{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #12c2e9;
+}
+
+/*Card text*/
+.education-card .card-text{
+    font-size: 1rem;
+    color: #12c2e9;
+}
+
+/* Card styles for better visibility */
+.education-card {
+    background-color: #007;  /* Dark but not completely black */
+    border: 2px solid #ffc107;     /* golden border */
+    color: #fff;                /* White text for better readability */
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Cambria', serif; /* Clear and readable font */
+}
+
+/* Golden ribbon */
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #ffc107; /* Golden ribbon color */
+}
+
+/* Hover effect */
+.education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+/* Clearer text */
+.education-card h6, .education-card p, .education-card a {
+    color: #f64f59; /* White text for clear visibility */
 }
 
 .card-body {
