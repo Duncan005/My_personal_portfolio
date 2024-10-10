@@ -376,16 +376,17 @@ a:hover{
 }
 
 .hero-portrait .pic {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 45vw;
-    background-size: contain;
-    background-position: bottom;
+    position: relative;
+    width: 25vw;
+    height: 30vw; /* Ensure height matches width for a square */
+    background-size: cover; /* Cover the image within the square without distortion */
+    background-position: center; /* Center the image */
     background-repeat: no-repeat;
     background-image: url(/assets/images/portrait.webp);
+    border: 2px solid #9051e3; /* Optional: Add a border for styling */
+    border-radius: 1px; /* Optional: Rounded corners for a modern look */
 }
+
 
 @media (max-width: 576px) {
     #hero {
@@ -441,20 +442,22 @@ a:hover{
 }
 
 .square-img {
-    width: 28vw;
-    border-radius: 50%;
+    width: 28vw; /* Set width */
+    height: 30vw; /* Set height to match width for a square */
+    border-radius: 10px; /* Change this to 0 for sharp corners or a lower value for subtle rounding */
     object-fit: cover;
     border: 5px solid #fff;
     box-shadow: 0 0 25px red;
     position: relative;
     cursor: pointer;
     transition: 0.2s linear;
-  }
+}
+
 
   .square-img:hover{
 
     transform: scale(1.1);
-    box-shadow: 0 0 25px red,
+    box-shadow: 0 0 25px none,
     0 0 50px red,
     0 0 75px red,
     0 0 100px red
@@ -866,10 +869,10 @@ a:hover{
 
 .testimonial{
     margin: 0 15px;
-    border: 1px solid #e3e3e3;
+    border: 2px solid black;
     border-radius: 8px;
     padding: 20px;
-    background-color: white;
+    background-color: green;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -878,7 +881,7 @@ a:hover{
     font-size: 18px;
     line-height: 26px;
     padding: 30px 20px;
-    border: 1px solid rgba(144, 81, 227, .5);
+    border: 1px solid rgba(227, 115, 81, 0.897);
     border-left: 3px solid rgba(144, 81, 227, .8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -1152,6 +1155,47 @@ a:hover {
         transform: translateY(0);
     }
 }
+
+/*--------------------------------------------------------------
+#Resume Section
+---------------------------------------------------------------*/
+.resume-section {
+    padding: 60px 0;
+    background-color: darkgray;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #9051e3;
+}
+
+.resume-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.download-btn {
+    background-color: #9051e3;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.btn.theme-button:hover {
+    background-color: #7a3ec1;
+}
+
+.btn.theme-button i {
+    margin-right: 10px;
+}
+
 
 /*--------------------------------------------------------------
 # Footer Section
