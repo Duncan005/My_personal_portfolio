@@ -62,25 +62,41 @@ function scrollToTop(){
     document.documentElement.scrollTop = 0;
 }
 
-//Testimonial Slider
-$(document).ready(function(){
-    $("#testimonial-slider").owlCarousel({
-        items:3,
-        nav:true,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        responsive:{
-            0:{
-                items:1,
-            },
-            768:{
-                items:2,
-            },
-            1170:{
-                items:3,
-            }
-        }
-    });
+// Testimonial Slider
+const swiper = new Swiper(".slider-wrapper", {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 20, // Adjust space between slides for a consistent look
+
+    // Pagination bullets
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+    }
 });
+
+
 

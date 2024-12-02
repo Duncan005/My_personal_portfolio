@@ -42,6 +42,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet"href="assets/css/color-1.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
     <!-- Preload Important resources -->
     <link rel="preload" href="assets/css/aos.css" as="style" >
@@ -72,7 +75,7 @@
             <div class="container">
                 <a href="/" class="navbar-brand logo">
                     <span></span>
-                    <span class="logo-name">MY PORTFOLIO</span>
+                    <span class="logo-name">ZEVAI DUNCAN</span>
                     <span>/></span>
                 </a>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarMenu">
@@ -104,91 +107,126 @@
 
     <!-- Hero -->
 <section id="hero">
-    <div class="container">     
-        <div class="row about-content">
-            <div class="col-lg-5 order-lg-2">
-                <div class="hero-portrait">
-                    <div class="pic" data-aos="fade-up" data-aos-delay="600">
-                        <!-- Add the image directly here -->
-                        <img src="assets\images\Dante02.jpeg" alt="Duncan Zevai" class="img-fluid square-img">
+    <div class="container">
+        <div class="profile-card"> 
+             <div class="profile-pic">
+                <img src="assets/images/Dante01.jpeg" alt="user avatar" width="150" height="150">
+             </div>
+ 
+             <div class="profile-details">
+                  <div class="intro">
+                     <h2>Duncan Zevai</h2>
+                     <h4>Aspiring Software Engineer & Web Developer</h4>
+                     <div class="social">
+                         <a href="https://github.com/Duncan005"><i class="fab fa-github" style="color:var(--blue)"></i></a>
+                         <a href="https://www.instagram.com/duncanzevai/"><i class="fab fa-instagram" style="color:var(--blue)"></i></a>
+                         <a href="https://x.com/zevaiduncan2"><i class="fab fa-twitter"  style="color:var(--skyblue)"></i></a>
+                         <a href="https://www.youtube.com/@duncanzevai9785"><i class="fab fa-youtube"  style="color:var(--dark-pink)"></i></a>
+                         <a href="https://www.linkedin.com/in/duncan-zevai-04a31720b/"><i class="fab fa-linkedin"  style="color:var(--light-blue)"></i></a>
+                     </div>
+                  </div>
+ 
+                  <div class="contact-info">
+                     <div class="row">
+                          <div class="icon">
+                             <i class="fa fa-phone"  style="color:var(--dark-magenta)"></i>
+                          </div>
+                          <div class="content">
+                             <span>Phone</span>
+                             <h5>+254 717 126 889</h5>
+                             <h5>+254 700 085 929</h5>
+                          </div>
+                     </div>
+ 
+                     <div class="row">
+                         <div class="icon">
+                            <i class="fa fa-envelope-open"  style="color:var(--light-green)"></i>
+                         </div>
+                         <div class="content">
+                            <span>Email</span>
+                            <h5>zevaiduncan2@gmail.com</h5>
+                         </div>
                     </div>
+     
+                    <div class="row">
+                     <div class="icon">
+                        <i class="fa fa-map-marker"  style="color:var(--light-purple)"></i>
+                     </div>
+                     <div class="content">
+                        <span>Location</span>
+                        <h5>Nairobi Kenya</h5>
+                     </div>
+                  </div>
+ 
+             </div>
+                <button class="download-btn"> <i class="fa fa-download"></i> Download CV</button>
+             </div>
+        </div>
+ 
+        <!----about section ----->
+        <div class="about">
+            <h1>About Me</h1>
+ 
+            <p class="bio">
+                Hey, I'm Zevai Duncan, an aspiring software engineer and web developer with a passion for building intuitive and functional web applications. I’m dedicated to creating user-friendly interfaces and efficient back-end systems, always exploring new technologies to push my skills further.
+                </br></br>
+                Outside of tech, I love playing football, which keeps me active and grounded. Football also brings valuable lessons in teamwork and perseverance that I carry into my work.
+                </br></br>
+                I’m always open to connecting with others interested in tech, web development, or football!
+            </p>
+            
+           <h2>What I Do !!!</h2>
+           <div class="work">
+              <div class="workbox">
+                  <div class="icon">
+                     <img src="images/ui.svg" alt="">
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">Web Development</p>
+                    <p class="card-text">I enjoy building functional and visually appealing websites that provide seamless experiences for users. Blending aesthetics with functionality, I aim to create user-friendly websites that bring ideas to life on the web.</p>
                 </div>
-            </div>
-            <div class="col-lg-7 order-lg-1 hero-content">
-                <span class="h3" data-aos="fade-up" data-aos-delay="0">Hello, I'm</span>
-                <h1 class="name" data-aos="fade-up" data-aos-delay="200"><span>DUNCAN ZEVAI</h1>
-                <button type="button" class="btn btn-sm mt-3 mb-3 btn-showcase"  data-aos="fade-up" data-aos-delay="400"><i class="bi bi-stars"></i> Aspiring Software Engineer & Web Developer</button>
-                <p class="tagline mb-3" data-aos="fade-up" data-aos-delay="600">
-                    Started <span class="underline">unintentionally</span> with coding experiments in 2021. </br> Now, I craft <span class="underline">efficient</span> and <span class="underline">innovative</span> solutions, bringing ideas to </br> life through beautiful and responsive websites. This time with <span class="underline">intentionality, </br> passion, and the belief that <em>"Code is not just logic, it's creativity at its finest."</em>
-                </p>                
-                <div class="social-icons pb-2 pt-2 mb-2">
-                    <a href="https://github.com/Duncan005" target="_blank" class="github" data-aos="fade-up" data-aos-delay="620"><i class="bi bi-github"></i></a>
-                    <a href="https://x.com/zevaiduncan2" target="_blank" class="twitter-x" data-aos="fade-up" data-aos-delay="640"><i class="bi bi-twitter-x"></i></a>
-                    <a href="https://www.instagram.com/duncanzevai/" target="_blank" class="instagram" data-aos="fade-up" data-aos-delay="660"><i class="bi bi-instagram"></i></a>
-                    <a href="https://www.youtube.com/@duncanzevai9785" target="_blank" class="youtube" data-aos="fade-up" data-aos-delay="680"><i class="bi bi-youtube"></i></a>
-                    <a href="https://www.linkedin.com/in/duncan-zevai-04a31720b/" target="_blank" class="linkedin" data-aos="fade-up" data-aos-delay="690"><i class="bi bi-linkedin"></i></a>
+              </div>
+ 
+              <div class="workbox">
+                 <div class="icon">
+                    <img src="images/app.svg" alt="">
+                 </div>
+                 <div class="card-body">
+                    <p class="card-title">App Development</p>
+                    <p class="card-text">Turning concepts into interactive applications is one of my passions. I love creating apps that are not only engaging but also solve real-world problems, enhancing the lives of users through thoughtful design and functionality.</p>
                 </div>
-                <div class="d-flex call-to-action">
-                    <a href="#contact" data-aos="fade-up" data-aos-delay="700"><button type="button" class="btn me-4 primary-bg-btn"><i class="bi bi-envelope"></i> Contact Me</button></a>
-                    <a href="#projects" data-aos="fade-up" data-aos-delay="800"><button type="button" class="btn btn-light secondary-bg-btn">View Portfolio <i class="bi bi-arrow-up-right-circle"></i></button></a>
-                </div>                    
-            </div>
+             </div>
+ 
+             <div class="workbox">
+                 <div class="icon">
+                    <img src="images/api.svg" alt="">
+                 </div>
+                 <div class="card-body">
+                    <p class="card-title">Computer Maintenance</p>
+                    <p class="card-text">Ensuring systems are optimized and maintained is crucial to smooth operations. I enjoy troubleshooting and improving system performance, keeping hardware and software running efficiently and securely.</p>
+                </div> 
+             </div>
+ 
+             <div class="workbox">
+                 <div class="icon">
+                    <img src="images/web.svg" alt="">
+                 </div>
+                 <div class="card-body">
+                    <p class="card-title">Networking</p>
+                    <p class="card-text">Networking fascinates me, as it’s the backbone of modern connectivity. I enjoy setting up and managing networks to ensure secure, reliable communication across devices, enhancing collaboration and efficiency.</p>
+                </div>
+             </div>
+           </div>
         </div>
     </div>
 </section>
-
-
-    <!-- Things I Love -->
-    <section id="things-i-love">
-        <div class="container">
-            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">My Interests</span></h6>
-            <h2 class="section-heading text-center">Things I Love Doing</h2>
-            <div class="row justify-content-center pt-3 gy-4">
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" >
-                    <div class="card">
-                        <div class="circle-container">
-                            <div class="circle"><i class="bi bi-droplet-half"></i></div>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-title">Web Development</p>
-                            <p class="card-text">I am passionate about web development. I enjoy turning ideas into visually appealing and user-friendly websites. With attention to detail, I focus on creating designs that not only look great but also provide a seamless experience for users. My aim is to combine aesthetics with functionality.</p>
-                        </div>                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" >
-                    <div class="card">
-                        <div class="circle-container">
-                            <div class="circle"><i class="bi bi-code-slash"></i></i></div>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-title">Developing</p>
-                            <p class="card-text">After crafting the design, I immerse myself in development. Writing code is where my designs take shape, transforming ideas into interactive, digital experiences. Each project reflects my dedication to creating functional and elegant solutions that meet the highest standards of quality.</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" >
-                    <div class="card">
-                        <div class="circle-container">
-                            <div class="circle"><i class="bi bi-cup-hot"></i></div>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-title">Expanding</p>
-                            <p class="card-text">Beyond development, I focus on optimizing my work. Whether it's refining templates or full websites, I enhance performance and user experience. Using blogging and basic SEO strategies, I ensure that my creations are not only functional but also visible and impactful in the digital space.</p>
-                        </div>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 <!-- About Me -->
 <section id="about">
     <div class="container">
         <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">But who am I?</span></h6>
-        <h2 class="section-heading text-center">About Me</h2>
-        <p class="text-center muted-text mt-3 mb-4">(A Snapshot Of My Journey ;)</p>
+        <h2 class="section-heading text-center">(A Snapshot Of My Journey ;)</h2>
         <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="200">
             <div class="col-lg-5 about-portrait">
                 <img src="assets/images/Dante04.jpeg" class="img-fluid pic" alt="About Me Portrait">
@@ -209,71 +247,75 @@
 </section>
 
 
-    <!-- Skills Section -->
-<section id="skills">
-    <div class="container">
-        <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What do I know?</span></h6>
-        <h2 class="section-heading text-center">Skills</h2>
-        <p class="text-center muted-text mt-3 mb-4">Here Are Some Of The Technologies That Are Part Of My Current Stack:</p>
-        
-        <div class="row justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 mt-4 gy-4 skills-container" data-aos="fade-up" data-aos-delay="200">
-            <div class="col">
-                <div class="skill">
-                    <img class="skill-image" src="assets/images/html.png.jpg" alt="HTML">
-                    <p class="skill-name">HTML</p>
-                </div>
+   <!-- skill section starts -->
+   <section class="skill mt-5 py-5" id="about">
+    <div class="row justify-content-evenly">
+      <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
+        <div class="row justify-content-evenly">
+          <div class="col-10 col-md-6">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress html-css">
+                <span class="progress-value html-progress">90%</span>
+              </div>
+              <br />
+              <span class="text">HTML & CSS</span>
             </div>
-            <div class="col">
-                <div class="skill">
-                    <img class="skill-image" src="assets/images/css.png.jpg" alt="CSS">
-                    <p class="skill-name">CSS</p>
-                </div>
+          </div>
+          <div class="col-10 col-md-6 mt-4 mt-md-0">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress javascript">
+                <span class="progress-value javascript-progress">50%</span>
+              </div>
+              <br />
+              <span class="text">JavaScript</span>
             </div>
-            <div class="col">
-                <div class="skill">
-                    <img class="skill-image" src="assets/images/script.png.jpg" alt="JavaScript">
-                    <p class="skill-name">JS</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill">
-                    <img class="skill-image" src="assets/images/node.png.jpg" alt="NodeJS">
-                    <p class="skill-name">NodeJS</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill">
-                    <img class="skill-image" src="assets/images/bootstrap.png.jpg" alt="Bootstrap">
-                    <p class="skill-name">Bootstrap</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill">
-                    <img class="skill-image" src="assets/images/c.png.jpg" alt="C">
-                    <p class="skill-name">C</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill">
-                    <img class="skill-image" src="assets/images/laravel.png.jpg" alt="Laravel">
-                    <p class="skill-name">Laravel</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill">
-                    <img class="skill-image" src="assets/images/android.png.jpg" alt="Android">
-                    <p class="skill-name">Android</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill">
-                    <img class="skill-image" src="assets/images/skills/php.png.jpg" alt="PHP">
-                    <p class="skill-name">PHP</p>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="row justify-content-evenly mt-4">
+          <div class="col-10 col-md-6">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress php">
+                <span class="progress-value php-progress">50%</span>
+              </div>
+              <br />
+              <span class="text">PHP & LARAVEL</span>
+            </div>
+          </div>
+          <div class="col-10 col-md-6 mt-4 mt-md-0">
+            <div class="progress-card ms-3  ms-md-0">
+              <div class="circular-progress reactjs">
+                <span class="progress-value reactjs-progress">70%</span>
+              </div>
+              <br>
+              <span class="text">BOOTSTRAP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-md-5 skill-detail" data-aos="slide-left">
+        <div class="heading mt-5 mt-md-3">
+            <small>My Skills</small>
+            <h3>Beautiful & Unique Digital Experiences</h3>
+            <p class="text-muted">
+              I am committed to creating visually stunning and user-friendly digital experiences. With expertise in various tools and technologies, I ensure that every project is both functional and engaging.
+            </p>
+            <p class="text-muted">
+              My goal is to bring creativity and precision to each project, using my skills to craft solutions that are both innovative and effective.
+            </p>
+            
+          <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+            <!-- here download attribute is used for adding download functionality to button  -->
+            <a href="assets\resume\DANTEZRE..pdf" class="btn theme-button download-btn" download>
+                <i class="fas fa-file-download"></i> Download Resume
+            </a>
+          </button>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+  <!-- skill section end here -->
+
+
 
 <!-- Tools Section -->
 <section id="tools">
@@ -354,7 +396,7 @@
                                     <p class="stacks m-0">HTML | CSS | LARAVEL</p>
                                 </div>
                                 <div class="col-3 align-middle">
-                                    <a href="assets\images\booking.png" class="btn btn-sm primary-bg-btn rounded-5" target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                                    <a href="https://github.com/Duncan005" class="btn btn-sm primary-bg-btn rounded-5" target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -382,7 +424,7 @@
                                     <p class="stacks m-0">HTML | CSS | BOOTSTRAP</p>
                                 </div>
                                 <div class="col-3 align-middle">
-                                    <a href="assets\images\DEFTEC BG.png" class="btn btn-sm primary-bg-btn rounded-5" target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                                    <a href="https://github.com/Duncan005" class="btn btn-sm primary-bg-btn rounded-5" target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -432,71 +474,79 @@
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials">
-        <div class="container">
-            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What They Think?</span></h6>
-            <h2 class="section-heading text-center">Testimonials</h2>
-            <p class="text-center muted-text mt-3 mb-4">What Do My Colleagues And Clients Say About Me.</p>
-            <div class="row mt-4 gy-4" data-aos="fade-down" data-aos-delay="200">
-                <div class="col-md-12">
-                    <div id="testimonial-slider" class="owl-carousel">
-                        <div class="testimonial">
-                            <p class="description">
-                                Your brilliance is truly inspiring. You bring so much positivity and creativity wherever you go. You have an incredible ability to uplift and motivate those around you, making every project a joy to collaborate on.
-                            </p>                            
-                            <div class="pic">
-                                <img src="assets\images\testimonials\chadwick.png.jpeg" alt="Chadwick madede Pic">
-                            </div>
-                            <div class="detail">
-                                <h4 class="name">Chadwick Madede</h4>
-                                <small class="role" >Programmer</small>
-                            </div>
-                        </div>
-         
-                        <div class="testimonial">
-                            <p class="description">
-                                Bro, I admire your hard work. Your efforts speak volumes about you.Remember, every line of code brings you closer to your dreams.Your determination and passion for coding are truly unmatched.
-                            </p>
-                                                        
-                            <div class="pic">
-                                <img src="assets\images\testimonials\Phegan.png.jpeg" alt="Phegan indeche Pic">
-                            </div>
-                            <div class="detail">
-                                <h4 class="name">Phegan Indeche</h4>
-                                <small class="role">Friend</small>
-                            </div>
-                        </div>
-
-                       <div class="testimonial">
-                        <p class="description">
-                            Duncan's commitment and hard work shine through in everything he does. His passion for software engineering is evident in his dedication to crafting innovative solutions and pushing boundaries.
-                        </p>                        
-                            <div class="pic">
-                                <img src="assets\images\testimonials\George.png.jpeg" alt="Geroge Kasemba Pic" class="">
-                            </div>
-                            <div class="detail">
-                                <h4 class="name">George Kasemba</h4>
-                                <small class="role">Web Developer</small>
-                            </div>
-                        </div>
-
-                        <div class="testimonial">
-                            <p class="description">
-                                Working with Duncan has been an incredible experience. His dedication in web development truly shine through his work. He has a remarkable ability to turn ideas into reality & crafting websites that exceed expectations.
-                            </p>
-                            <div class="pic">
-                                <img src="assets\images\testimonials\Bazeeh.jpeg" alt="Isaac zachary Pic">
-                            </div>
-                            <div class="detail">
-                                <h4 class="name">Isaac zachary</h4>
-                                <small class="role">Software Developer</small>
-                            </div>
-                        </div>
+<section id="testimonials">
+    <div class="container">
+        <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What They Think?</span></h6>
+        <h2 class="section-heading text-center">Testimonials</h2>
+        <p class="text-center muted-text mt-3 mb-4">What Do My Colleagues And Clients Say About Me.</p>
+        <div class="swiper slider-wrapper">
+            <div class="swiper-wrapper">
+                
+                <!-- Testimonial 1 -->
+                <div class="swiper-slide testimonial">
+                    <p class="description">
+                        Your brilliance is truly inspiring. You bring so much positivity and creativity wherever you go. You have an incredible ability to uplift and motivate those around you, making every project a joy to collaborate on.
+                    </p>
+                    <div class="pic">
+                        <img src="assets/images/testimonials/chadwick.png.jpeg" alt="Chadwick Madede Pic">
+                    </div>
+                    <div class="detail">
+                        <h4 class="name">Chadwick Madede</h4>
+                        <small class="role">Programmer</small>
                     </div>
                 </div>
+
+                <!-- Testimonial 2 -->
+                <div class="swiper-slide testimonial">
+                    <p class="description">
+                        Bro, I admire your hard work. Your efforts speak volumes about you. Remember, every line of code brings you closer to your dreams. Your determination and passion for coding are truly unmatched.
+                    </p>
+                    <div class="pic">
+                        <img src="assets/images/testimonials/Phegan.png.jpeg" alt="Phegan Indeche Pic">
+                    </div>
+                    <div class="detail">
+                        <h4 class="name">Phegan Indeche</h4>
+                        <small class="role">Friend</small>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="swiper-slide testimonial">
+                    <p class="description">
+                        Duncan's commitment and hard work shine through in everything he does. His passion for software engineering is evident in his dedication to crafting innovative solutions and pushing boundaries.
+                    </p>
+                    <div class="pic">
+                        <img src="assets/images/testimonials/George.png.jpeg" alt="George Kasemba Pic">
+                    </div>
+                    <div class="detail">
+                        <h4 class="name">George Kasemba</h4>
+                        <small class="role">Web Developer</small>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="swiper-slide testimonial">
+                    <p class="description">
+                        Working with Duncan has been an incredible experience. His dedication in web development truly shines through his work. He has a remarkable ability to turn ideas into reality & crafting websites that exceed expectations.
+                    </p>
+                    <div class="pic">
+                        <img src="assets/images/testimonials/Bazeeh.jpeg" alt="Isaac Zachary Pic">
+                    </div>
+                    <div class="detail">
+                        <h4 class="name">Isaac Zachary</h4>
+                        <small class="role">Software Developer</small>
+                    </div>
+                </div>
+
             </div>
+            <!-- Pagination and Navigation buttons -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-    </section>
+    </div>
+</section>
+
 
    <!-- Certifications -->
 <section id="certifications">
@@ -592,6 +642,13 @@
                                     <button type="submit" class="btn primary-bg-btn mt-2">Send Message <i class="bi bi-arrow-up-right"></i></button>
                                 </div>
                             </div>
+                            <div class="social-icons">
+                                <a href="https://www.youtube.com/@duncanzevai9785"><i class="fab fa-youtube"></i></a>
+                                <a href="https://x.com/zevaiduncan2"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/duncanzevai/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/duncan-zevai-04a31720b/"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/Duncan005"><i class="fab fa-github"></i></a>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -605,6 +662,13 @@
             <a href="assets\resume\DANTEZRE..pdf" class="btn theme-button download-btn" download>
                 <i class="fas fa-file-download"></i> Download Resume
             </a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@duncanzevai9785"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/zevaiduncan2"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/duncanzevai/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/duncan-zevai-04a31720b/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Duncan005"><i class="fab fa-github"></i></a>
         </div>
     </section>
     
@@ -661,6 +725,7 @@
     <script src="assets/js/owl.carousel.min.js" defer></script>
     <script src="assets/js/bootstrap.min.js" defer></script>
     <script src="assets/js/script.js" defer></script>
+    <script src="script.js"></script>
     <script>
         // Handle form submission via mailto
         document.getElementById('contactForm').addEventListener('submit', function (event) {

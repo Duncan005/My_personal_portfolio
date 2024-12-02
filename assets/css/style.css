@@ -71,8 +71,8 @@ a:hover{
 ::-webkit-scrollbar-thumb {
     border-radius: 20px;
     background: var(--vertical-gradient);
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px -2px rgba(0,0,0,0.25);
     -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px -2px rgba(0,0,0,0.25);
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px -2px rgba(0,0,0,0.25);
 }
 
 .social-icons a{
@@ -107,8 +107,8 @@ a:hover{
     color: var(--btn-color);
     background-color: var(--primary-color);
     border: none;
-    transition: var(--transition-default);
     -webkit-transition: var(--transition-default);
+    transition: var(--transition-default);
 }
 
 .primary-bg-btn:hover{
@@ -122,8 +122,8 @@ a:hover{
     color: var(--btn-color);
     background-color: none;
     border-color: var(--primary-color);
-    transition: var(--transition-default);
     -webkit-transition: var(--transition-default);
+    transition: var(--transition-default);
 }
 
 .primary-outline-btn:hover{
@@ -187,8 +187,8 @@ a:hover{
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 
 .theme-text{
@@ -218,10 +218,10 @@ a:hover{
     bottom: 0;
     left: 0;
     display: block;
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    animation: fadeOutPreloader 1s linear 1s forwards;
+    backdrop-filter: blur(20px);
     -webkit-animation: fadeOutPreloader 1s linear 1s forwards;
+    animation: fadeOutPreloader 1s linear 1s forwards;
 }
 
 @keyframes fadeOutPreloader {
@@ -237,15 +237,15 @@ a:hover{
 
 #header{
     background: transparent;
-    transition: top 0.5s ease;
+    -webkit-transition: top 0.5s ease;
     background-color: #00093c;
     padding: 10px;
-    -webkit-transition: top 0.5s ease;
+    transition: top 0.5s ease;
 }
 
 .fixed-top{
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
 }
 
     @media (max-width: 767px) {
@@ -257,8 +257,8 @@ a:hover{
     }
 
 #header .navbar{
-    backdrop-filter: 20px;
     -webkit-backdrop-filter: 20px;
+    backdrop-filter: 20px;
     padding: 15px 0;
 }
 
@@ -268,8 +268,8 @@ a:hover{
 }
 
 .navbar-toggler:focus {
-    box-shadow: none;
     -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .offcanvas{
@@ -284,8 +284,8 @@ a:hover{
     right: 15px;
     bottom: 15px; 
     padding: 10px 15px;
-    transition: none;
     -webkit-transition: none;
+    transition: none;
     border: 2px solid var(--offcanvas-border-color);
 }
 
@@ -298,8 +298,8 @@ a:hover{
     position: relative;
     font-size: 15px;
     border-bottom: none;
-    transition: width 0.35s ease;
     -webkit-transition: width 0.35s ease;
+    transition: width 0.35s ease;
 }
 
 .navbar-nav > li > .nav-link.active::after {
@@ -320,8 +320,8 @@ a:hover{
     width: 0;
     height: 2px;
     background-image: var(--underline-gradient);
-    transition: width 0.35s ease;
     -webkit-transition: width 0.35s ease;
+    transition: width 0.35s ease;
 }
 
 .navbar-nav > li > .nav-link:hover::after {
@@ -332,194 +332,225 @@ a:hover{
 # Hero Section
 --------------------------------------------------------------*/
 
-#hero {
+body{
+    background: linear-gradient(45deg, #2e3b4e, #788896);
+
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
     position: relative;
-    padding: 50px 0px 50px 0px;
-    min-height: 85vh;
-    background-color: #008080;
 }
-
-#hero .name {
-    background: var(--primary-gradient-color);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-#hero .btn-showcase {
-    border-radius: 32px;
-    border-color: #7042f88b;
-    border-width: 1px;
-    backdrop-filter: blur(6px); 
-    -webkit-backdrop-filter: blur(6px); 
-    box-shadow: inset 0 -7px 11px rgba(141, 53, 229, .136);
-    -webkit-box-shadow: inset 0 -7px 11px rgba(141, 53, 229, .136);
-    transition: box-shadow .45s cubic-bezier(.6,.6,0,1);
-    -webkit-transition: box-shadow .45s cubic-bezier(.6,.6,0,1);
-}
-
-#hero .btn-showcase i {
-    font-size: 13px;
-}
-
-#hero .btn-showcase:hover {
-    box-shadow: inset 0 -7px 11px rgba(141, 53, 229, .536);
-}
-
-#hero .badge-button {
-    margin-bottom: 15px;
-}
-
-#hero .tagline {
-    letter-spacing: 1.5px;
-    color: var(--muted-text);
-}
-
-.hero-portrait .pic {
+.profile-card{
+    background: linear-gradient(45deg, #0ef, #c800ff);
+    width:400px;
+    padding: 3rem;
+    border-radius: 10px;
+    min-height: 400px;
     position: relative;
-    width: 25vw;
-    height: 30vw; /* Ensure height matches width for a square */
-    background-size: cover; /* Cover the image within the square without distortion */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat;
-    background-image: url(/assets/images/portrait.webp);
-    border: 2px solid #9051e3; /* Optional: Add a border for styling */
-    border-radius: 1px; /* Optional: Rounded corners for a modern look */
+    color:#fff;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.profile-card .profile-pic{
+    margin-top: 15px;
+    overflow: hidden;
+}
+.profile-card .profile-pic img{
+    max-width: 150px;
+        max-height: 150px;
+        border-radius: 50%; /* Optional for circular profile */
+        object-fit: cover; /* Maintains aspect ratio without distortion */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for a polished look */
+}
+.profile-card .profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 500px; /* Slightly narrower max width */
+    padding: 10px; /* Reduces inner spacing */
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(45deg, #0d3b66, #3a506b);
+
+}
+
+.profile-card .profile-details h2 {
+    font-size: 1.2rem; /* Smaller heading size */
+    margin: 8px 0; /* Less space around heading */
+}
+
+.profile-card .profile-details p {
+    font-size: 0.9rem; /* Smaller paragraph text */
+    margin: 6px 0; /* Reduced spacing for compactness */
+    line-height: 1.4; /* Reduces line spacing slightly */
 }
 
 
-@media (max-width: 576px) {
-    #hero {
-        padding: 35px 0px 0px 0px;
-    }
-
-    .hero-portrait {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        max-width: 170px;
-        height: 170px;
-        max-height: 170px;
-        margin: 0 auto;
-        border: solid 3px transparent;
-        border-radius: 50%;
-        background-image: var(--primary-gradient-color), radial-gradient(circle at top left, var(--primary-color),var(--secondary-color));;
-        background-origin: border-box;
-        background-clip: content-box, border-box;
-    }
-
-    .hero-portrait .pic {
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-image: url(/assets/images/portrait.webp);
-    }
-
-    .hero-content{
-        margin-top: 35px;
-    }
-
-    #hero .btn-showcase {
-        font-size: 12px;
-    }
-
-    #hero .tagline {
-        font-size: 14px;
-        letter-spacing: 1.2px;
-    }
-
-    #hero .social-icons a:hover{
-
-        color: black;
-        background-color: red;
-        transform: scale(1.3) translateY(-5px);
-    }
-
-    #hero .call-to-action{
-        margin-top: 0px;
-    }
-}
-
-.square-img {
-    width: 28vw; /* Set width */
-    height: 30vw; /* Set height to match width for a square */
-    border-radius: 10px; /* Change this to 0 for sharp corners or a lower value for subtle rounding */
-    object-fit: cover;
-    border: 5px solid #fff;
-    box-shadow: 0 0 25px red;
-    position: relative;
-    cursor: pointer;
-    transition: 0.2s linear;
-}
-
-
-  .square-img:hover{
-
-    transform: scale(1.1);
-    box-shadow: 0 0 25px none,
-    0 0 50px red,
-    0 0 75px red,
-    0 0 100px red
-    ;
-
-  }
-    
-
-/*--------------------------------------------------------------
-# Things I Love Section
---------------------------------------------------------------*/
-
-#things-i-love {
-    padding: 50px 0px;
-    background-image: url(/assets/images/grid.png);
-    background-size: contain;
-    min-height: 60vh;
-    background-color: #00093c;
-}
-
-#things-i-love .card {
-    background-color: transparent;
-    padding: 10px;
-    border-radius: 24px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 0 1px 0 rgba(144, 81, 227, .5), 0 0 0.5px 0.5px rgba(141, 53, 229, .336);
-    -webkit-box-shadow: 0 0 1px 0 rgba(144, 81, 227, .5), 0 0 0.5px 0.5px rgba(141, 53, 229, .336);
-}
-
-#things-i-love .circle-container {
+.profile-details .intro{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    padding: 11px;
+    flex-direction: column;
 }
-
-#things-i-love .circle {
+.profile-details .intro h2{
+    font-size: 1.2rem; /* Smaller heading size */
+    margin: 8px 0; /* Less space around heading */
+}
+.profile-details .intro h4{
+    background: #1d1d1d;
+    font-weight: 400;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 8px;
+}
+.profile-details .intro .social{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.profile-details .intro .social i{
+    color:#ddd;
+    font-size: 16px;
+    background-color:#222;
+    margin: 5px;
+    height: 35px;
+    width:35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.profile-details .intro .social i:hover{
+    transform: scale(1.2);
+    border:1px solid rgba(255,255,255,0.3);
+}
+.profile-details .contact-info{
+    background: linear-gradient(45deg, #2e3b4e, #788896);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+}
+.profile-details .contact-info .row{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    color: #fff;
-    background: var(--primary-gradient-color);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 10px 0;
+    margin-bottom: 10px;
 }
-
-#things-i-love .circle i {
-    font-size: 2.2rem;
-}
-
-#things-i-love .card-title {
-    font-size: 18px;
+.contact-info .row .icon{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: #333; /* Dark gray for a modern, neutral base */
     text-align: center;
+    color: #e67339; /* White text for clarity */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Softer transition for color change */
 }
+.row .icon:hover{
+    transform:scale(1.2);
+    border:1px solid rgba(255,255,255,0.1);
+}
+.row .content{
+    min-width: 70%;
+}
+.row .content span{
+    font-size: 12px;
+}
+.download-btn{
+    background: linear-gradient(45deg, #f64c57,#e21b5a);
+    color:#fff;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    margin-top: 1.5rem;
+    border:none;
+}
+/*****about section ****/
+.about{
+    background: linear-gradient(45deg, #0ef, #c800ff);
+    max-width: 800px;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+}
+.about h1{
+    color:#e67339;
+    margin-bottom: 1.1rem;
+    position: relative;
+    display: inline-block;
+    font-size: 3.5rem;
+}
+.about h1::after{
+    position: absolute;
+    content: "";
+    top:50%;
+    right:-50%;
+    width:45%;
+    height: 3px;
+    background: linear-gradient(45deg, #f64c57,#e21b5a);
+}
+.about h2{
+    color:#e67339;
+    font-size: 2rem;
+    margin:0.5rem 0;
+}
+.about p{
+    color:whitesmoke;
+    text-size-adjust: 10px;
+    margin:1.5rem 0;
+}
+.about .work{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+.work .workbox{
+    display: flex;
+    justify-content: space-between;
+    border-radius:8px;
+    border:1px solid #333;
+    padding: 1rem;
+    margin:1rem;
+    background: linear-gradient(45deg, #0d3b66, #3a506b);
 
-#things-i-love .card-text{
-    text-align: center;
-    font-size: 14px;
-    color: var(--muted-text);
+}
+.work .workbox .desc{
+    width:75%;
+    color:#555;
+}
+.work .workbox .desc h3{
+    color:#f2f2f2;
+    margin-bottom: 3px;
+}
+.work .workbox .desc p{
+    margin:0px;
+}
+/***Responsive Design ***/
+@media(max-width:768px)
+{
+    .about{
+        width: 1005;
+        max-width: 400px;
+        padding:1rem;
+        margin:1rem;
+
+    }
+    .about h1{
+        font-size: 2.2rem;
+    }
+    .about .work{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,auto);
+    }
 }
 
 /*--------------------------------------------------------------
@@ -564,16 +595,16 @@ a:hover{
     width: 300px;
     position: absolute;
     z-index: -2;
-    box-shadow: 2px 2px 0px inset var(--primary-color), -2px -2px 0px inset transparent;
     -webkit-box-shadow: 2px 2px 0px inset var(--primary-color), -2px -2px 0px inset transparent;
-    transition-duration: .5s;
+    box-shadow: 2px 2px 0px inset var(--primary-color), -2px -2px 0px inset transparent;
     -webkit-transition-duration: .5s;
+    transition-duration: .5s;
 }
 
 .about-portrait:hover::before {
     transform: translate(-23px,-23px);
-    transition-duration: .5s;
     -webkit-transition-duration: .5s;
+    transition-duration: .5s;
 }
 
 .about-portrait::after {
@@ -583,16 +614,16 @@ a:hover{
     width: 300px;
     position: absolute;
     z-index: -2;
-    box-shadow: 2px 2px 0px inset transparent, -2px -2px 0px inset var(--primary-color);
     -webkit-box-shadow: 2px 2px 0px inset transparent, -2px -2px 0px inset var(--primary-color);
-    transition-duration: .5s;
+    box-shadow: 2px 2px 0px inset transparent, -2px -2px 0px inset var(--primary-color);
     -webkit-transition-duration: .5s;
+    transition-duration: .5s;
 }
 
 .about-portrait:hover::after {
     transform: translate(35px,30px);
-    transition-duration: .5s;
     -webkit-transition-duration: .5s;
+    transition-duration: .5s;
 }
 
 .about-portrait .pic {
@@ -631,47 +662,113 @@ a:hover{
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
-
-#skills{
-    display: flex;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1.2rem;
-    padding: 50px 50px;
-    min-height: 80vh;
-    background-color: #00093c;
+/* skill section starts */
+.skill{
+    background-color: rgb(234, 234, 249);
 }
-
-/* Skills Section with Custom Border and Backdrop */
-.skill {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border: 1px solid rgba(144, 81, 227, .5);
-    border-left: 3px solid rgba(144, 81, 227, .8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.progress-card{
+    padding: 12% 10% 10% 15%;
+    background-color: #fff;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
+    border-radius: 10%;
 }
-
-.skill:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+.progress-card:hover{
+    transform: scale(1.1,1.1);
+    transition-duration: 0.6s;
 }
-
-.skill-image {
-    width: 60px;
-    height: auto;
-    margin-bottom: 15px;
+.circular-progress{
+    position: relative;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.skill-name {
-    font-size: 1.1rem;
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.progress-value{
+    position: relative;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: #333;
 }
+.html-progress{
+    color: #fca61f;
+}
+.javascript-progress{
+    color: #6f34fe;
+}
+.php-progress{
+    color: #20c997;
+}
+.reactjs-progress{
+    color: #3f396d;
+}
+.text{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.heading p{
+    font-size: 1.3rem;
+}
+
+
+/*--------------------------------------------------------------
+# Content Descriptions
+--------------------------------------------------------------*/
+
+/* General styling for content blocks */
+.content {
+    background-color: #0ef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect on content block */
+.content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styling */
+.content h3 {
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+.content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Styling for each content item to make it look consistent and professional */
+.content h3 {
+    font-family: 'Arial', sans-serif;
+    color: #007bff;
+}
+
+.content p {
+    font-family: 'Verdana', sans-serif;
+    color: #666;
+    margin-top: 5px;
+}
+
+
 
 
 /*--------------------------------------------------------------
@@ -698,8 +795,8 @@ a:hover{
     padding: 20px;
     border: 1px solid rgba(144, 81, 227, .5);
     border-left: 3px solid rgba(144, 81, 227, .8);
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -756,10 +853,10 @@ a:hover{
     background-color: transparent;
     padding: 10px;
     border-radius: 24px;
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 0 1px 0 rgba(144,81,227,.5), 0 0 0.5px 0.5px rgba(141,53,229,.336);
+    backdrop-filter: blur(20px);
     -webkit-box-shadow: 0 0 1px 0 rgba(144,81,227,.5), 0 0 0.5px 0.5px rgba(141,53,229,.336);
+    box-shadow: 0 0 1px 0 rgba(144,81,227,.5), 0 0 0.5px 0.5px rgba(141,53,229,.336);
 }
 
 .project-card .title {
@@ -776,8 +873,8 @@ a:hover{
     width: 0;
     height: 2px;
     background-image: var(--underline-gradient);
-    transition: width 0.35s ease;
     -webkit-transition: width 0.35s ease;
+    transition: width 0.35s ease;
 }
 
 .project-card .title:hover::after {
@@ -827,8 +924,8 @@ a:hover{
     top: 0;
     left: 0;
     border-radius: inherit;
-    transition: opacity 0.3s ease;
     -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .project-card .banner-container:hover .overlay {
@@ -883,9 +980,24 @@ a:hover{
     padding: 30px 20px;
     border: 1px solid rgba(227, 115, 81, 0.897);
     border-left: 3px solid rgba(144, 81, 227, .8);
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
 }
+
+/* Testimonial Slide Layout */
+.swiper-slide {
+    width: calc(33.33% - 30px); /* 3 columns on larger screens */
+    margin: 0 15px;
+}
+
+/* For mobile devices, use 1 column per slide */
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+}
+
 
 /* Notch Icon for Testimonial Div */
 .testimonial .description:after{
@@ -898,8 +1010,8 @@ a:hover{
     background: rgba(144, 81, 227, .8);
     border-bottom: 1px solid rgba(144, 81, 227, .5);
     border-left: 1px solid rgba(144, 81, 227, .5);
-    transform: skewY(-45deg);
-    -webkit-transform: skewY(-45deg);  
+    -webkit-transform: skewY(-45deg);
+    transform: skewY(-45deg);  
 }
 
 .testimonial .pic{
@@ -1086,13 +1198,15 @@ a:hover {
 }
 
 .contact-form{
+    border: 2px solid white;
+    backdrop-filter: blur(10px);
     padding: 35px;
     border-radius: 8px;
     background-color: darkblue;
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
     -webkit-box-shadow: 0 0 1px 0 rgba(144, 81, 227, .5), 0 0 0.5px 0.5px rgba(141, 53, 229, .336);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form input,
@@ -1115,25 +1229,28 @@ a:hover {
 .contact-form .form-control{
     padding: 0.775rem 1.05rem;
     background-color: transparent;
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
 }
 
 .contact-form .form-control:focus{
-    box-shadow: none;
     -webkit-box-shadow: none;
+    box-shadow: none;
     border-color: #850dd5;
 }
 
 .contact-form .btn{
-    background-color: #850dd5;
-    color: #fff;
     border: none;
-    padding: 10px 20px;
+    outline: none;
+    width: 288px;
+    margin-top: 25px;
+    padding: 10px 0;
+    font-size: 20px;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 40px;
+    letter-spacing: 1px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    background: linear-gradient(45deg, #0ef, #c800ff);
 }
 
 .contact-form button:hover{
@@ -1161,7 +1278,7 @@ a:hover {
 ---------------------------------------------------------------*/
 .resume-section {
     padding: 60px 0;
-    background-color: darkgray;
+    background-color: burlywood;
     text-align: center;
 }
 
@@ -1179,13 +1296,17 @@ a:hover {
 }
 
 .download-btn {
-    background-color: #9051e3;
-    color: white;
-    padding: 12px 25px;
-    font-size: 1rem;
-    border-radius: 5px;
-    text-transform: uppercase;
-    display: inline-block;
+    border: none;
+    outline: none;
+    width: 288px;
+    margin-top: 25px;
+    padding: 10px 0;
+    font-size: 20px;
+    font-size: 18px;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #0ef, #c800ff);
 }
 
 .btn.theme-button:hover {
@@ -1318,8 +1439,8 @@ footer {
     right: 10px;
     bottom: 0px;
     z-index: 999;
-    transition: var(--transition-default);
     -webkit-transition: var(--transition-default);
+    transition: var(--transition-default);
 }
 
 
