@@ -236,9 +236,9 @@ a:hover{
 --------------------------------------------------------------*/
 
 #header{
-    background: transparent;
+    background: linear-gradient(45deg, #0ef, #c800ff);
     -webkit-transition: top 0.5s ease;
-    background-color: #00093c;
+    background-color: #33333c;
     padding: 10px;
     transition: top 0.5s ease;
 }
@@ -346,7 +346,7 @@ body{
     position: relative;
 }
 .profile-card{
-    background: linear-gradient(45deg, #0ef, #c800ff);
+    background: white;
     width:400px;
     padding: 3rem;
     border-radius: 10px;
@@ -385,12 +385,12 @@ body{
 }
 
 .profile-card .profile-details h2 {
-    font-size: 1.2rem; /* Smaller heading size */
+    font-size: 1.5rem; /* Smaller heading size */
     margin: 8px 0; /* Less space around heading */
 }
 
 .profile-card .profile-details p {
-    font-size: 0.9rem; /* Smaller paragraph text */
+    font-size: 1.5rem; /* Smaller paragraph text */
     margin: 6px 0; /* Reduced spacing for compactness */
     line-height: 1.4; /* Reduces line spacing slightly */
 }
@@ -403,7 +403,7 @@ body{
     flex-direction: column;
 }
 .profile-details .intro h2{
-    font-size: 1.2rem; /* Smaller heading size */
+    font-size: 1.5rem; /* Smaller heading size */
     margin: 8px 0; /* Less space around heading */
 }
 .profile-details .intro h4{
@@ -553,289 +553,6 @@ body{
     }
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-#about{
-    padding: 50px 0px;
-    background-image: url(/assets/images/grid.png);
-    background-size: contain;
-    min-height: 80vh;
-    background-color: #008080;
-}
-
-.bio {
-    margin: 0.5rem 0; /* Adjusted margin for less space */
-    line-height: 1.4; /* Reduced line height for tighter text */
-}
-
-/* Adjust container padding if necessary */
-#about .container {
-    padding-top: 2rem; /* Adjust padding as needed */
-    padding-bottom: 2rem; /* Adjust padding as needed */
-}
-
-/* Optional: Adjust image and column spacing */
-.about-portrait img {
-    max-height: 500px; /* Limit image height */
-    object-fit: cover; /* Ensure proper aspect ratio */
-}
-
-.about-portrait{
-    display: flex;
-    padding: 30px 0px 30px 0px;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-portrait::before {
-    content: "";
-    background-color: transparent;
-    height: 300px;
-    width: 300px;
-    position: absolute;
-    z-index: -2;
-    -webkit-box-shadow: 2px 2px 0px inset var(--primary-color), -2px -2px 0px inset transparent;
-    box-shadow: 2px 2px 0px inset var(--primary-color), -2px -2px 0px inset transparent;
-    -webkit-transition-duration: .5s;
-    transition-duration: .5s;
-}
-
-.about-portrait:hover::before {
-    transform: translate(-23px,-23px);
-    -webkit-transition-duration: .5s;
-    transition-duration: .5s;
-}
-
-.about-portrait::after {
-    content: "";
-    background-color: transparent;
-    height: 300px;
-    width: 300px;
-    position: absolute;
-    z-index: -2;
-    -webkit-box-shadow: 2px 2px 0px inset transparent, -2px -2px 0px inset var(--primary-color);
-    box-shadow: 2px 2px 0px inset transparent, -2px -2px 0px inset var(--primary-color);
-    -webkit-transition-duration: .5s;
-    transition-duration: .5s;
-}
-
-.about-portrait:hover::after {
-    transform: translate(35px,30px);
-    -webkit-transition-duration: .5s;
-    transition-duration: .5s;
-}
-
-.about-portrait .pic {
-    width: 55%;
-    height: 100%;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover;
-    box-shadow: 
-        0 0 30px 10px rgba(255, 0, 0, 0.6),  /* Red LED glow */
-        0 0 50px 20px rgba(255, 255, 0, 0.5), /* Yellow LED glow */
-        12px 8px 0px 0px #850dd5; /* Original shadow */
-}
-
-
-#about .bio{
-    padding: 30px 0 30px 0;
-    color: var(--muted-text);
-    font-size: 15px;
-    word-spacing: 5px;
-}
-
-    @media (max-width: 576px) {
-        .about-portrait{
-            display: flex;
-            padding: 30px 36px 30px 36px;
-        }
-        .about-portrait .pic {
-            width: 90%;
-        }
-        #about .bio{
-            font-size: 14px;
-            padding: 30px 15px 30px 15px;
-        }
-    }
-
-/*--------------------------------------------------------------
-# Skills Section
---------------------------------------------------------------*/
-/* skill section starts */
-.skill{
-    background-color: rgb(234, 234, 249);
-}
-.progress-card{
-    padding: 12% 10% 10% 15%;
-    background-color: #fff;
-    text-align: center;
-    border-radius: 10%;
-}
-.progress-card:hover{
-    transform: scale(1.1,1.1);
-    transition-duration: 0.6s;
-}
-.circular-progress{
-    position: relative;
-    height: 130px;
-    width: 130px;
-    border-radius: 50%;
-    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.circular-progress::before{
-    content: "";
-    position: absolute;
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    background-color: #fff;
-}
-.progress-value{
-    position: relative;
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-.html-progress{
-    color: #fca61f;
-}
-.javascript-progress{
-    color: #6f34fe;
-}
-.php-progress{
-    color: #20c997;
-}
-.reactjs-progress{
-    color: #3f396d;
-}
-.text{
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-.heading p{
-    font-size: 1.3rem;
-}
-
-
-/*--------------------------------------------------------------
-# Content Descriptions
---------------------------------------------------------------*/
-
-/* General styling for content blocks */
-.content {
-    background-color: #0ef;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Hover effect on content block */
-.content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Heading styling */
-.content h3 {
-    font-size: 24px;
-    color: #333;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-/* Paragraph styling */
-.content p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-/* Styling for each content item to make it look consistent and professional */
-.content h3 {
-    font-family: 'Arial', sans-serif;
-    color: #007bff;
-}
-
-.content p {
-    font-family: 'Verdana', sans-serif;
-    color: #666;
-    margin-top: 5px;
-}
-
-
-
-
-/*--------------------------------------------------------------
-# Tools Section
---------------------------------------------------------------*/
-
-/* Tools Section */
-#tools{
-    background-color: #008080;
-}
-.tools-container {
-    display: flex;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    background-color: #008080;
-}
-
-/* Tools Section with Custom Border and Backdrop */
-.tool {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border: 1px solid rgba(144, 81, 227, .5);
-    border-left: 3px solid rgba(144, 81, 227, .8);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-}
-
-.tool:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.tool-image {
-    width: 60px;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.tool-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
-}
-
-
-@media (max-width: 768px) {
-    .tools-container {
-        flex-direction: column;
-    }
-}
-
-
-/*--------------------------------------------------------------
-# Timeline Section
---------------------------------------------------------------*/
-
-#timelines{
-    padding: 20px 0px 20px 0px;
-}
 
 /*--------------------------------------------------------------
 # Projects Section
@@ -846,7 +563,7 @@ body{
     min-height: 90vh;
     background-image: url(/assets/images/grid.png);
     background-size: contain;
-    background-color: #00093c;
+    background-color: #008080;
 }
 
 .project-card{
@@ -953,117 +670,6 @@ body{
 .project-card .primary-bg-btn:hover {
     background-color: transparent;
     border: 1px solid var(--bg-color);
-}
-
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-
-#testimonials {
-    background-color: #008080;
-    padding: 60px 0;
-}
-
-.testimonial{
-    margin: 0 15px;
-    border: 2px solid black;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: green;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial .description{
-    position: relative;
-    font-size: 18px;
-    line-height: 26px;
-    padding: 30px 20px;
-    border: 1px solid rgba(227, 115, 81, 0.897);
-    border-left: 3px solid rgba(144, 81, 227, .8);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-}
-
-/* Testimonial Slide Layout */
-.swiper-slide {
-    width: calc(33.33% - 30px); /* 3 columns on larger screens */
-    margin: 0 15px;
-}
-
-/* For mobile devices, use 1 column per slide */
-@media (max-width: 768px) {
-    .swiper-slide {
-        width: 100%;
-        margin: 0 0 20px;
-    }
-}
-
-
-/* Notch Icon for Testimonial Div */
-.testimonial .description:after{
-    position: absolute;
-    bottom: -11px;
-    left: 65px;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background: rgba(144, 81, 227, .8);
-    border-bottom: 1px solid rgba(144, 81, 227, .5);
-    border-left: 1px solid rgba(144, 81, 227, .5);
-    -webkit-transform: skewY(-45deg);
-    transform: skewY(-45deg);  
-}
-
-.testimonial .pic{
-    display: inline-block;
-    overflow: hidden;
-    width: 80px;
-    height: 80px;
-    margin: 20px 30px 10px;
-    border: solid 3px transparent;
-    border-radius: 50%;
-    object-fit: cover;
-    background-image: var(--primary-gradient-color), radial-gradient(circle at top left, var(--primary-color),var(--secondary-color));;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-}
-
-.testimonial .pic img{
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-
-}
-
-.testimonial .detail{
-    margin: 0 30px;
-}
-
-.testimonial .detail .name{
-    color: var(--primary-color);
-    font-size: 17px;
-    font-weight: bold;
-    margin: 0 0 5px 0;
-}
-
-.testimonial .detail .role{
-    font-size: 14px;
-    color: var(--muted-text);
-}
-
-.owl-nav {
-    display: flex;
-    position: absolute;
-    top: 70%;
-    transform: translateY(-50%);
-    width: 100%;
-    justify-content: space-between;
-}
-
-.owl-prev span,
-.owl-next span {
-    font-size: 25px;
 }
 
 
@@ -1190,18 +796,18 @@ a:hover {
 --------------------------------------------------------------*/
 
 #contact{
-    padding: 100px 0;
+    padding: 40px 0;
     min-height: 90vh;
-    background-color: #008080;
+    background-color: #1d3557;
     background-image: url(/assets/images/grid.png);
     background-size: contain;
 }
 
 .contact-form{
-    border: 2px solid white;
+    border: 2px solid skyblue;
     backdrop-filter: blur(10px);
-    padding: 35px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 10px;
     background-color: darkblue;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
@@ -1280,29 +886,32 @@ a:hover {
     padding: 60px 0;
     background-color: burlywood;
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .section-heading {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 20px;
     color: #9051e3;
+    text-transform: uppercase;
+    align-self: center;
 }
 
 .resume-text {
     font-size: 1.1rem;
     color: #555;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .download-btn {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border: none;
     outline: none;
     width: 288px;
-    margin-top: 25px;
+    margin-top: 20px;
     padding: 10px 0;
-    font-size: 20px;
-    font-size: 18px;
+    font-size: 20px; /* Keep this one */
     border-radius: 40px;
     letter-spacing: 1px;
     cursor: pointer;
@@ -1314,8 +923,9 @@ a:hover {
 }
 
 .btn.theme-button i {
-    margin-right: 10px;
+    margin: auto;
 }
+
 
 
 /*--------------------------------------------------------------

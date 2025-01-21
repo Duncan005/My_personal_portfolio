@@ -6,7 +6,8 @@
     "axe/name-role-value": [
       "default",
       {
-        "button-name": "off"
+        "button-name": "off",
+        "link-name": "off"
       }
     ],
     "axe/keyboard": [
@@ -22,7 +23,8 @@
       {
         "ignore": [
           "text-size-adjust",
-          "text-wrap"
+          "text-wrap",
+          "text-wrap: nowrap"
         ]
       }
     ]
